@@ -1,0 +1,30 @@
+{% extends 'articles/base.html' %}
+
+{% block main-content %}
+    {% if articles %}
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="table-responsive table--no-card m-b-30">
+                    <table class="table table-borderless table-striped table-earning">
+                        <thead>
+                        <tr>
+                            <th>title</th>
+                            <th class="text-right">count</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for article in articles %}
+                            <tr>
+                                <td><a href="{% url 'articles:detail' article.id %}">{{ article.title }}</a></td>
+                                <td>todocount</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p>No articles are available.</p>
+    {% endif %}
+{% endblock %}

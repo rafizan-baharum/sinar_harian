@@ -1,0 +1,134 @@
+pip freeze > requirements.txt
+# =================================================================================================
+# Django
+# =================================================================================================
+virtualenv -p /path/to/python3 django_env
+-- activate virtenv
+pip install Django
+python -m django --version
+django-admin startproject sinar_harian
+
+https://docs.djangoproject.com/en/2.2/ref/django-admin/
+
+-- requirement for postgres
+-- change database settings in settings.py
+pip install Psycopg2=2.7.5
+
+python manage.py runserver	
+
+
+# =================================================================================================
+# sql alchemy stuff
+# =================================================================================================
+
+pip install sqlalchemy
+
+https://github.com/achiku/sample-django-sqlalchemy/blob/master/apps/sale/models.py
+https://github.com/auvipy/django-sqlalchemy
+https://docs.sqlalchemy.org/en/13
+
+pip install django-sorcery
+python manage.py sorcery revision -m "Add article models" articles
+python manage.py sorcery upgrade --sql articles
+
+https://stackoverflow.com/questions/21328599/why-isnt-sqlalchemy-creating-serial-columns
+https://stackoverflow.com/questions/10059345/sqlalchemy-unique-across-multiple-columns
+
+# =================================================================================================
+# postgres sequence issue
+# =================================================================================================
+
+https://coderwall.com/p/ajdngg/adding-a-postgresql-sequence-with-alembic
+## add these line
+op.execute(CreateSequence(Sequence('sq_cng_cmnt')))
+
+# =================================================================================================
+# show url
+# =================================================================================================
+https://stackoverflow.com/questions/1275486/django-how-can-i-see-a-list-of-urlpatterns
+pip install django-extensions
+
+
+# =================================================================================================
+# beautiful soup
+# =================================================================================================
+
+pip install requests
+pip install beautifulsoup4
+
+# =================================================================================================
+# bootstrap 4
+# =================================================================================================
+https://docs.djangoproject.com/en/2.2/ref/templates/language/
+https://pypi.org/project/django-bootstrap4/
+
+# =================================================================================================
+# static files
+# =================================================================================================
+
+
+https://docs.djangoproject.com/en/2.2/howto/static-files/
+https://www.youtube.com/watch?v=Pkrm2nucaKA
+https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-STATICFILES_DIRS
+http://rahmonov.me/posts/django-static-files/
+https://stackoverflow.com/questions/9824359/django-static-files
+https://stackoverflow.com/questions/30430131/get-the-file-path-for-a-static-file-in-django-code
+https://stackoverflow.com/questions/7574759/django-cant-get-static-css-files-to-load
+https://stackoverflow.com/questions/28879731/django-1-6-how-to-access-static-files-in-view
+
+# =================================================================================================
+# facebook + beautiful soup
+# =================================================================================================
+
+https://stackoverflow.com/questions/40441335/parse-public-facebook-posts-with-beautifulsoup-python
+
+
+# =================================================================================================
+# sqlalchemy + enum 
+# =================================================================================================
+https://stackoverflow.com/questions/36136112/defining-sqlalchemy-enum-column-with-python-enum-raises-valueerror-not-a-valid
+
+https://stackoverflow.com/questions/32311366/alembic-util-command-error-cant-find-identifier
+
+python manage.py sorcery revision -m "Add enum" articles
+python manage.py sorcery upgrade --sql articles
+python manage.py sorcery upgrade 
+
+
+# =================================================================================================
+# script + django manage.py
+# =================================================================================================
+https://stackoverflow.com/questions/16853649/how-to-execute-a-python-script-from-the-django-shell
+
+# =================================================================================================
+# taxonomy tree
+# =================================================================================================
+    python manage.py startapp taxonomies
+
+	op.execute(CreateSequence(Sequence('sq_cng_txmy')))
+
+	
+	https://stackoverflow.com/questions/4896104/creating-a-tree-from-self-referential-tables-in-sqlalchemy
+
+# =================================================================================================
+# check settings 
+# =================================================================================================
+
+	https://stackoverflow.com/questions/6369697/how-do-i-print-out-the-contents-of-my-settings-in-a-django-shell
+
+
+
+
+# github
+https://kbroman.org/github_tutorial/pages/init.html
+
+https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository
+
+
+
+
+
+
+
+
+
