@@ -4,7 +4,7 @@ blinker==1.4
 certifi==2019.6.16
 chardet==3.0.4
 configparser==3.7.4
-Django==2.2.4
+Django==2.2.27
 django-extensions==2.2.1
 django-sorcery==0.9.4
 graphviz==0.11.1
