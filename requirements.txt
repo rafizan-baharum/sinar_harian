@@ -9,7 +9,7 @@ django-extensions==2.2.1
 django-sorcery==0.9.4
 graphviz==0.11.1
 idna==2.8
-Mako==1.1.0
+Mako==1.2.2
 MarkupSafe==1.1.1
 psycopg2==2.7.5
 pydot==1.4.1
